@@ -15,6 +15,7 @@ type
     BTNIngresar: TBitBtn;
     Image1: TImage;
     procedure BTNIngresarClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -23,7 +24,7 @@ type
 
 var
   FLogin: TFLogin;
-
+  UsuarioID :Integer;
 implementation
       uses UDMtintoreria, UPrincipal;
 {$R *.dfm}
@@ -39,8 +40,10 @@ begin
     if(DMtintoreria.QClientes.RecordCount > 0)then
     begin
          Application.CreateForm(TFPrincipal, FPrincipal);
+         UsuarioID:=   DMtintoreria.QClientes.Recordset.Fields.Item('idusuario').Value;
          FLogin.Hide;
          FPrincipal.Show;
+
 
     end
     else begin
@@ -48,5 +51,7 @@ begin
     end;
 
 end;
+
+
 
 end.

@@ -4,11 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons;
+  Dialogs, StdCtrls, Buttons, Menus;
 
 type
   TFPrincipal = class(TForm)
-    BitBtn1: TBitBtn;
+    BTNcatalogo: TBitBtn;
+    BTNentregas: TBitBtn;
+    BTNservicio: TBitBtn;
+    LBienvenida: TLabel;
+    procedure FormCreate(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -19,7 +24,12 @@ var
   FPrincipal: TFPrincipal;
 
 implementation
-
+        uses UDMtintoreria, ULogin;
 {$R *.dfm}
+
+procedure TFPrincipal.FormCreate(Sender: TObject);
+begin
+  LBienvenida.Caption:= 'Bienvenido:'+ IntToStr( ULogin.UsuarioID);
+end;
 
 end.

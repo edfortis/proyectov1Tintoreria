@@ -2,15 +2,20 @@ object FLogin: TFLogin
   Left = 0
   Top = 0
   Caption = 'Inicio de Sesi'#243'n'
-  ClientHeight = 235
-  ClientWidth = 406
+  ClientHeight = 197
+  ClientWidth = 390
   Color = clBtnFace
+  Constraints.MaxHeight = 235
+  Constraints.MaxWidth = 406
+  Constraints.MinHeight = 235
+  Constraints.MinWidth = 406
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Visible = True
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
