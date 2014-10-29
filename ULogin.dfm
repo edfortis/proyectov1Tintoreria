@@ -15,7 +15,6 @@ object FLogin: TFLogin
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Visible = True
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -3295,5 +3294,14 @@ object FLogin: TFLogin
     ParentDoubleBuffered = False
     TabOrder = 2
     OnClick = BTNIngresarClick
+  end
+  object BTNCancelar: TButton
+    Left = 144
+    Top = 152
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    TabOrder = 3
+    OnClick = BTNCancelarClick
   end
 end

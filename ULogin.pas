@@ -14,44 +14,45 @@ type
     TBContrasena: TEdit;
     BTNIngresar: TBitBtn;
     Image1: TImage;
+    BTNCancelar: TButton;
     procedure BTNIngresarClick(Sender: TObject);
+    procedure BTNCancelarClick(Sender: TObject);
 
+
+
+   
   private
     { Private declarations }
+
   public
     { Public declarations }
   end;
 
 var
   FLogin: TFLogin;
-  UsuarioID :Integer;
+  bandera:Boolean;
 implementation
-      uses UDMtintoreria, UPrincipal;
+
 {$R *.dfm}
+uses UDMtintoreria;
 
-procedure TFLogin.BTNIngresarClick(Sender: TObject);
-var query:String;
+procedure TFLogin.BTNCancelarClick(Sender: TObject);
 begin
-    query:= 'SELECT * FROM usuario WHERE usuario like '+QuotedStr(TBUsuario.Text)+
-    ' and contraseña =  '+QuotedStr(TBContrasena.Text);
-    DMtintoreria.QClientes.Active:=false;
-    DMtintoreria.QClientes.SQL.Text:=query;
-    DMtintoreria.QClientes.Active:=true;
-    if(DMtintoreria.QClientes.RecordCount > 0)then
-    begin
-         Application.CreateForm(TFPrincipal, FPrincipal);
-         UsuarioID:=   DMtintoreria.QClientes.Recordset.Fields.Item('idusuario').Value;
-         FLogin.Hide;
-         FPrincipal.Show;
-
-
-    end
-    else begin
-         ShowMessage('Clave o Contraseña Incorrecta');
-    end;
-
+Close;
 end;
 
-
+procedure TFLogin.BTNIngresarClick(Sender: TObject);
+begin
+  if( DMtintoreria.buscarPersona(TBUsuario.Text,TBContrasena.Text))then
+  begin
+    bandera:=true;
+    Close;
+  end
+  else
+  begin
+    ShowMessage('Usuario o Contraseña Incorretos!');
+    TBUsuario.SetFocus;
+  end;
+end;
 
 end.

@@ -21,4 +21,10 @@ object DMtintoreria: TDMtintoreria
     Left = 136
     Top = 32
   end
+  object QGeneral: TADOQuery
+    Connection = Conexion
+    Parameters = <>
+    Left = 200
+    Top = 32
+  end
 end

@@ -12,7 +12,7 @@ object FPrincipal: TFPrincipal
   Font.Style = []
   FormStyle = fsMDIForm
   OldCreateOrder = False
-  OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object LBienvenida: TLabel
