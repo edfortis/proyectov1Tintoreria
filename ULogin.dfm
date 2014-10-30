@@ -18,18 +18,30 @@ object FLogin: TFLogin
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 24
-    Top = 42
-    Width = 46
-    Height = 13
+    Left = 26
+    Top = 33
+    Width = 73
+    Height = 22
     Caption = 'Usuario:*'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = cl3DDkShadow
+    Font.Height = -16
+    Font.Name = 'Open Sans'
+    Font.Style = []
+    ParentFont = False
   end
   object Label2: TLabel
     Left = 24
-    Top = 96
-    Width = 66
-    Height = 13
+    Top = 88
+    Width = 101
+    Height = 22
     Caption = 'Contrase'#241'a:*'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = cl3DDkShadow
+    Font.Height = -16
+    Font.Name = 'Open Sans'
+    Font.Style = []
+    ParentFont = False
   end
   object Image1: TImage
     Left = 264
@@ -3273,14 +3285,26 @@ object FLogin: TFLogin
     Left = 24
     Top = 61
     Width = 225
-    Height = 21
+    Height = 26
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Open Sans'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object TBContrasena: TEdit
     Left = 24
-    Top = 115
+    Top = 116
     Width = 225
-    Height = 21
+    Height = 26
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Open Sans'
+    Font.Style = []
+    ParentFont = False
     PasswordChar = '*'
     TabOrder = 1
   end
@@ -3291,7 +3315,13 @@ object FLogin: TFLogin
     Height = 25
     Caption = 'Ingresar'
     DoubleBuffered = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGrayText
+    Font.Height = -16
+    Font.Name = 'Open Sans'
+    Font.Style = []
     ParentDoubleBuffered = False
+    ParentFont = False
     TabOrder = 2
     OnClick = BTNIngresarClick
   end
@@ -3301,6 +3331,12 @@ object FLogin: TFLogin
     Width = 75
     Height = 25
     Caption = 'Cancelar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGrayText
+    Font.Height = -15
+    Font.Name = 'Open Sans'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
     OnClick = BTNCancelarClick
   end

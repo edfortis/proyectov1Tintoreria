@@ -4,7 +4,9 @@ uses
   Forms,
   ULogin in 'ULogin.pas' {FLogin},
   UDMtintoreria in 'UDMtintoreria.pas' {DMtintoreria: TDataModule},
-  UPrincipal in 'UPrincipal.pas' {FPrincipal};
+  UPrincipal in 'UPrincipal.pas' {FPrincipal},
+  UCatalogo in 'UCatalogo.pas' {FCatalogo};
+
 {$R *.res}
 
 begin
@@ -12,5 +14,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDMtintoreria, DMtintoreria);
   Application.CreateForm(TFPrincipal, FPrincipal);
+
   Application.Run;
 end.

@@ -20,7 +20,7 @@ type
 
 var
   DMtintoreria: TDMtintoreria;
-
+  nombre:String;
 implementation
 
 {$R *.dfm}
@@ -37,6 +37,7 @@ begin
   if(QGeneral.RecordCount= 1) then
   begin
   resultado:=true;
+  nombre:=QGeneral.FieldByName('usuario').Value;
   end
   else
   begin

@@ -53,6 +53,9 @@
 			<DCCReference Include="UPrincipal.pas">
 				<Form>FPrincipal</Form>
 			</DCCReference>
+			<DCCReference Include="UCatalogo.pas">
+				<Form>FCatalogo</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
