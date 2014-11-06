@@ -30,7 +30,7 @@ rs:_Recordset;
 cadena:String;
 resultado:boolean;
 begin
-  cadena:='SELECT * FROM usuario WHERE usuario='+QuotedStr(usuario)+' AND contraseña='+QuotedStr(contrasena);
+  cadena:='SELECT * FROM usuario WHERE usuario='+QuotedStr(usuario)+' AND contrasena='+QuotedStr(contrasena);
   QGeneral.Active:=false;
   QGeneral.SQL.Text:=cadena;
   QGeneral.Active:=true;
