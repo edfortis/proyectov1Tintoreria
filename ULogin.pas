@@ -17,6 +17,7 @@ type
     BTNCancelar: TButton;
     procedure BTNIngresarClick(Sender: TObject);
     procedure BTNCancelarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
 
 
@@ -43,7 +44,7 @@ end;
 
 procedure TFLogin.BTNIngresarClick(Sender: TObject);
 begin
-  if( DMtintoreria.buscarPersona(TBUsuario.Text,TBContrasena.Text))then
+  if(DMtintoreria.buscarPersona(TBUsuario.Text,TBContrasena.Text))then
   begin
     bandera:=true;
     Close;
@@ -53,6 +54,12 @@ begin
     ShowMessage('Usuario o Contraseña Incorretos!');
     TBUsuario.SetFocus;
   end;
+end;
+
+procedure TFLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if bandera=false then
+  Application.Terminate;
 end;
 
 end.

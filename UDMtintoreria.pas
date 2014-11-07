@@ -11,6 +11,8 @@ type
     DSQUsuario: TDataSource;
     QClientes: TADOQuery;
     QGeneral: TADOQuery;
+    TEmpleado: TADOTable;
+    DSTEmpleado: TDataSource;
   private
     { Private declarations }
   public
@@ -30,18 +32,19 @@ rs:_Recordset;
 cadena:String;
 resultado:boolean;
 begin
-  cadena:='SELECT * FROM usuario WHERE usuario='+QuotedStr(usuario)+' AND contrasena='+QuotedStr(contrasena);
+  cadena:='SELECT * FROM usuario WHERE nombre='+QuotedStr(usuario)+' AND contrasena='+QuotedStr(contrasena);
   QGeneral.Active:=false;
   QGeneral.SQL.Text:=cadena;
   QGeneral.Active:=true;
-  if(QGeneral.RecordCount= 1) then
+  if(QGeneral.RecordCount = 1) then
   begin
   resultado:=true;
-  nombre:=QGeneral.FieldByName('usuario').Value;
+  nombre:=QGeneral.FieldByName('nombre').Value;
   end
   else
   begin
-  resultado :=false;
+  resultado:=false;
+  Result:=resultado;
   end;
 end;
 

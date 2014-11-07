@@ -6,12 +6,13 @@ object DMtintoreria: TDMtintoreria
     Connected = True
     ConnectionString = 
       'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Data' +
-      ' Source=proyectotintoreria;Initial Catalog=tintoreria'
+      ' Source=tintoreria;Initial Catalog=tintoreria'
     LoginPrompt = False
     Left = 64
     Top = 64
   end
   object DSQUsuario: TDataSource
+    DataSet = QClientes
     Left = 136
     Top = 80
   end
@@ -26,5 +27,18 @@ object DMtintoreria: TDMtintoreria
     Parameters = <>
     Left = 200
     Top = 32
+  end
+  object TEmpleado: TADOTable
+    Connection = Conexion
+    CursorType = ctStatic
+    LockType = ltReadOnly
+    TableName = 'empleado'
+    Left = 256
+    Top = 32
+  end
+  object DSTEmpleado: TDataSource
+    DataSet = TEmpleado
+    Left = 256
+    Top = 88
   end
 end

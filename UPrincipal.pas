@@ -37,9 +37,11 @@ implementation
 
 procedure TFPrincipal.FormShow(Sender: TObject);
 begin
+
    Application.CreateForm(TFLogin, FLogin);
    FLogin.ShowModal;
    EtiquetaBienvenida.Caption:= 'Bienvenido: '+nombre;
+
 end;
 
 procedure TFPrincipal.Image1Click(Sender: TObject);
